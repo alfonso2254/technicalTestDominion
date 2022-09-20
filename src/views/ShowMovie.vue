@@ -11,17 +11,37 @@
         <div class="w-full mt-5 md:mt-0 md:w-2/3 flex flex-wrap justify-between">
             <vs-card class="w-1/3 mb-2 -mx-1" v-for="(tr, indexTr) in peopleList" :key="indexTr">
                 <template #title>
-                <h3>Personaje</h3>
+                <h3>{{tr.name}}</h3>
                 </template>
                 <template #text>
-                    <p>Name: {{ tr.name }}</p>
-                    <p>Height: {{ tr.height }}</p>
-                    <p>Mass: {{ tr.mass }}</p>
-                    <p>Hair Color: {{ tr.hair_color }}</p>
-                    <p>Skin Color: {{ tr.skin_color }}</p>
-                    <p>Eye Color: {{ tr.eye_color }}</p>
-                    <p>Birth Year: {{ tr.birth_year }}</p>
-                    <p>Gender: {{ tr.gender }}</p>
+                    <div class="w-full flex justify-between px-5 py-2">
+                    <p class="text-center font-bold">Height:</p>
+                    <p class="text-center">{{  tr.height }}</p>
+                </div>
+                <div class="w-full flex justify-between px-5 py-2">
+                    <p class="text-center font-bold">Mass:</p>
+                    <p class="text-center">{{  tr.mass }}</p>
+                </div>
+                <div class="w-full flex justify-between px-5 py-2">
+                    <p class="text-center font-bold">Hair Color:</p>
+                    <p class="text-center">{{  tr.hair_color }}</p>
+                </div>
+                <div class="w-full flex justify-between px-5 py-2">
+                    <p class="text-center font-bold">Skin Color:</p>
+                    <p class="text-center">{{  tr.skin_color }}</p>
+                </div>
+                <div class="w-full flex justify-between px-5 py-2">
+                    <p class="text-center font-bold">Eye Color:</p>
+                    <p class="text-center">{{  tr.eye_color }}</p>
+                </div>
+                <div class="w-full flex justify-between px-5 py-2">
+                    <p class="text-center font-bold">Birth Year:</p>
+                    <p class="text-center">{{  tr.birth_year }}</p>
+                </div>
+                <div class="w-full flex justify-between px-5 py-2">
+                    <p class="text-center font-bold">Gender:</p>
+                    <p class="text-center">{{  tr.gender }}</p>
+                </div>
                 </template>
             </vs-card>
         </div>
